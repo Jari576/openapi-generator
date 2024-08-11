@@ -18,7 +18,7 @@ public class OAuth implements Authentication {
      * @return The bearer token
      */
     public String getAccessToken() {
-        return tokenSupplier.get();
+        return tokenSupplier == null ? null : tokenSupplier.get();
     }
 
     /**
